@@ -1,0 +1,15 @@
+<md-list flex id="games-list">
+	<md-list-item class="md-2-line" ng-repeat="game in games | orderBy:'-date'">
+		<div class="md-list-item-text">
+			<h3>{{game.date}}</h3>
+			<p>{{game.host}}</p>
+			<md-button class="md-secondary md-icon-button" ng-click="openGame(game.ID)" aria-label="delete">
+            	<md-icon md-svg-icon="images/check.svg" class="delete-icon"></md-icon>
+          	</md-button>
+		</div>
+	</md-list-item>
+</md-list>
+
+<md-button class="md-fab" aria-label="Add Games" id="add-game-button" ng-click="openNewGame()">
+	<md-icon md-svg-src="images/add.svg"></md-icon>
+</md-button>

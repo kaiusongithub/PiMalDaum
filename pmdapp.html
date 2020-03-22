@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/config.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="js/pimaldaum.js"></script>
+    <title>Pi Mal Daum</title>
+  </head>
+<body ng-app="PiMalDaumApp" ng-controller="myCtrl">
+
+  <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
+
+    <md-toolbar class="md-theme-indigo">
+      <h1 class="md-toolbar-tools">Men&uuml;</h1>
+    </md-toolbar>
+
+    <md-content layout-margin="">
+      <p>Home</p>
+      <p ng-click="openGames()">Spiele</p>
+      <p>Kasse</p>
+      <p>Punktestand</p>
+      <md-button ng-click="toggleLeft()" class="md-accent">
+        Men&uuml; schliessen
+      </md-button>
+    </md-content>
+
+  </md-sidenav>
+
+  <md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+        <md-icon md-svg-icon="images/menu.svg"></md-icon>
+      </md-button>
+
+      <h2 flex md-truncate>{{toolbarHeader}}</h2>
+
+    </div>
+  </md-toolbar>
+
+  <div class="ng-view"></div>
+
+<!--   <div id="main-content">
+    <div class="card"><span>Spiele</span></div>
+    <div class="card"><span>Kasse</span></div>
+    <div class="card"><span>Punktestand</span></div>
+  </div> -->
+
+  <script src="js/vendor/jquery-3.1.0.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+  <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+  <!-- <script src="js/cognito-auth.js"></script> -->
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-route.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script> 
+
+</body>
+</html>

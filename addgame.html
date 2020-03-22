@@ -1,0 +1,21 @@
+<div id="new-game-details-wrapper">
+	<md-input-container>
+		<label>Gastgeber</label>
+		<md-select ng-model="host" ng-model-options="{trackBy: '$value.ID'}">
+ 			<md-option ng-value="player" ng-repeat="player in players">
+				{{player.name}}
+			</md-option>
+			<md-option></md-option>
+		</md-select>
+	</md-input-container>
+
+	<p>Teilnehmer</p>
+
+	<md-checkbox ng-repeat="player in players" ng-model="player.isParticipant" aria-label="player.name">
+		{{player.name}}
+	</md-checkbox>
+</div>
+
+<md-button class="md-fab" aria-label="Add Games" id="add-new-game-button" ng-click="addNewGame()">
+	<md-icon md-svg-src="images/check.svg"></md-icon>
+</md-button>

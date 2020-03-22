@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/signin.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pi Mal Daum</title>
+  </head>
+<body ng-app="SignInApp" ng-controller="myCtrl">
+
+  <div id="login-wrapper">
+    <h1>Pi mal Daum Login</h1>
+    <!-- Test -->
+    <md-input-container class="md-block">
+      <label>E-Mail</label>
+      <input ng-model="email" type="email" required>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Passwort</label>
+      <input ng-model="password" type="password" pattern=".*" required>
+    </md-input-container>
+
+    <md-button class="md-raised md-primary" ng-click="handleSignin($event)">Einloggen</md-button>
+    <p id="login-error-message" ng-if="showLoginErrorMessage">{{message}}</p>
+  </div>
+
+  <script src="js/vendor/jquery-3.1.0.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+  <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+  <script src="js/config.js"></script>
+  <!-- <script src="js/cognito-auth.js"></script> -->
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script> 
+
+</body>
+</html>

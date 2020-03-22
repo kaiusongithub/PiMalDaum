@@ -1,0 +1,34 @@
+<p>Teilnehmer:</p>
+<p><span ng-repeat="participant in gameParticipants">{{participant.name}}<span ng-if="!$last">, </span></span></p>
+
+<md-list-item class="md-2-line" ng-click="null">
+	<div class="md-avatar">15</div>
+	<div class="md-list-item-text">
+		<h3>Runde 1 | Doppel-Bock | Reh von vorne</h3>
+		<p>Reh gewinnt | 5 Tacken</p>
+	</div>
+</md-list-item>
+<md-list-item class="md-2-line" ng-click="null">
+	<div class="md-avatar">15</div>
+	<div class="md-list-item-text">
+		<h3>Runde 1 | Doppel-Bock | Reh von vorne</h3>
+		<p>Reh gewinnt | 5 Tacken</p>
+	</div>
+</md-list-item>
+<md-list-item class="md-2-line" ng-click="null">
+	<div class="md-avatar">15</div>
+	<div class="md-list-item-text">
+		<h3>Runde 1 | Doppel-Bock | Reh von vorne</h3>
+		<p>Reh gewinnt | 5 Tacken</p>
+	</div>
+</md-list-item>
+
+<!-- GAME SUMMARY -->
+<md-button class="md-fab" aria-label="Add Games" id="game-summary-button" ng-click="">
+	<md-icon md-svg-src="images/menu.svg" ng-click="showSummary($event)"></md-icon>
+</md-button>
+
+<!-- ADD NEW ROUND -->
+<md-button class="md-fab" aria-label="Add Round" id="add-round-button" ng-click="">
+	<md-icon md-svg-src="images/add.svg"></md-icon>
+</md-button>
